@@ -11,7 +11,6 @@ textarea{
   border: none;
   resize: none;
   color: #000000;
-  border-left: 1px solid black;
   padding: 10px;
 }
 
@@ -21,12 +20,12 @@ textarea{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #10101E;
+
 }
 
+/* Digital clock style */
 .datetime {
   color: #fff;
-  background-color: #10101E;
   font-family: "Segoe UI", sans-serif;
   width: 340px;
   padding: 15px 10px;
@@ -36,6 +35,7 @@ textarea{
   -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.1));
   transition: 0.5s;
   transition-property: background, box-shadow;
+  margin-bottom: 120px;
 }
 
 .datetime:hover{
@@ -98,13 +98,19 @@ textarea{
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  margin-top: 10px;
+}
+
+
+.row:last-child{
+  margin-bottom: 30px;
 }
 
 .hour {
   background-color: #ffffff;
   color: #000000;
-  border-top: 1px dashed #000000;
+  font-weight: 700;
+  padding: 15px;
 }
 
 .past {
@@ -113,24 +119,27 @@ textarea{
 }
 
 .present {
-  background-color: #ff6961;
+  background-color: #61ffbd;
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-color: #98bedb;
   color: white;
 }
 
 .saveBtn {
-  border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
 }
 
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
+.saveBtn:hover {
+ color: #10101E;
 }
+
+#clearDay {
+  justify-content: center;
+}
+
