@@ -18,21 +18,87 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      href="./assets/css/style.css"
+      rel="stylesheet"
+    />
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+  <body onload="initClock()">
+    <header class="header">
+      <div class="jumbotron">
+        <h1 class="display-3">Work Day Scheduler</h1>
+        <p class="lead">A simple calendar app for scheduling your work day</p>
+        <p id="currentDay" class="lead"></p>
+      </div>
+
+      <!-- digital clock -->
+      <div class="datetime">
+        <div class="date">
+          <span id="dayname">Day</span>,
+          <span id="month">Month</span>
+          <span id="daynum">00</span>,
+          <span id="year">Year</span>
+        </div>
+        <div class="time">
+          <span id="hour">00</span>:
+          <span id="minutes">00</span>:
+          <span id="seconds">00</span>
+          <span id="period">AM</span>  
+        </div>
+      </div>
+    
+
     </header>
+
     <div class="container">
       <!-- Timeblocks go here -->
+ 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- script for the digital clock -->
+    <script type="text/javascript">
+    function updateClock() {
+    var now = new Date();
+    var dname= now.getDay(),
+        mo = now.getMonth(),
+        dnum = now.getDate(),
+        yr = now.getFullYear(),
+        hou = now.getHours(),
+        min = now.getMinutes(),
+        sec = now.getSeconds(),
+        pe = "AM";
+
+        if(hou == 0){
+            how = 12;
+        }
+        if(hou > 12){
+            how = hou - 12;
+            pe = "PM";
+        }
+
+        Number.prototype.pad = function(digits){
+          for(var n = this.toString(); n.length < digits; n = 0 + n);
+          return n;
+        }
+
+    var months = ["January", "February", "March", "April", "May", "June" , "July", "August", "September", "October", "November", "December"];
+    var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+    var values = [week[dname], month[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+    for(var i = 0; i < ids.length; i++)
+    document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+}
+function initClock(){
+    updateClock();
+    window.setInterval("updateClock()", 1);
+    
+}
+
+    </script>
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+       <script src="./assets/js/script.js"></script>
   </body>
 </html>
