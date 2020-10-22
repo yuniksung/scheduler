@@ -12,6 +12,7 @@ textarea{
   resize: none;
   color: #000000;
   padding: 10px;
+  
 }
 
 .header {
@@ -99,6 +100,7 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   margin-top: 10px;
+  
 }
 
 

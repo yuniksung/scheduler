@@ -22,7 +22,7 @@ var hourSpan;
 
 function initPage() {
 
-  console.log("Current Hour " + hour);
+//   console.log("Current Hour " + hour);
   var init9 = JSON.parse(localStorage.getItem("09:00 am"));
   nineAm.val(init9);
 
@@ -62,8 +62,8 @@ function background () {
   $(".form-control").each(function () {
       var timeTest = parseInt($(this).attr("id"));
       hour = parseInt(hour);
-      console.log(timeTest);
-      console.log(hour);
+    //   console.log(timeTest);
+    //   console.log(hour);
 //      console.log(this);
       if (hour > timeTest) {
           $(this).addClass("past");
@@ -82,9 +82,9 @@ $(document).ready(function(){
   // Buttons (save to Local Storage)
   $(".saveBtn").on("click", function(){
     userInput = $(this).siblings(".form-control").val().trim();
-    console.log(userInput);
+    // console.log(userInput);
     hourSpan = $(this).siblings(".input-group-prepend").text().trim();
-    console.log(hourSpan);
+    // console.log(hourSpan);
     localStorage.setItem(hourSpan, JSON.stringify(userInput));
 
   })
@@ -93,7 +93,7 @@ $(document).ready(function(){
     localStorage.clear();
     initPage()
   }) 
-  
+
   // Button for clear the day
   $("#clearDay").on("click", function(){
     localStorage.clear();
