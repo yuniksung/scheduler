@@ -34,20 +34,21 @@
       </div>
 
       <!-- digital clock -->
-      <div class="datetime">
+      <div class="datetime" id="digitClock">
         <div class="date">
           <span id="dayname">Day</span>,
           <span id="month">Month</span>
           <span id="daynum">00</span>,
           <span id="year">Year</span>
         </div>
-        <div class="time">
+        <div id="draggable" class="time">
           <span id="hour">00</span>:
           <span id="minutes">00</span>:
           <span id="seconds">00</span>
           <span id="period">AM</span>  
         </div>
       </div>
+      <p id="currentDay" class="lead"></p>
       <div class="clearbtn">
         <button type="button" class="btn btn-outline-primary" id="clearDay">Clear All</button>
       </div>
@@ -146,27 +147,7 @@
           <button type="button" class="saveBtn"><i class="fas fa-cloud-upload-alt"></i></button>
         </div>
       </div>
-      
-      <div class="row">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text hour">06:00 pm </span>
-          </div>
-          <textarea class="form-control" aria-label="With textarea" id="18pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-cloud-upload-alt"></i></button>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text hour">07:00 pm </span>
-          </div>
-          <textarea class="form-control" aria-label="With textarea" id="19pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-cloud-upload-alt"></i></button>
-        </div>
-      </div>
-      
+          
     </div>
 
     
