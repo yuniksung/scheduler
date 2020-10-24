@@ -9,7 +9,7 @@ Simply click one of the textbox and write your schedule and don't forget to save
 You can also drag a digital clock anywhere you want to see current time and date!
 
 ## Screenshot of the application
-![](/assets/images/screenshot.jpg)
+![](/assets/images/screen.jpg)
 
 ## Built With:
 * HTML
