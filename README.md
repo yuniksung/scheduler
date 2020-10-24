@@ -17,7 +17,11 @@ You can also drag a digital clock anywhere you want to see current time and date
 * JavaScript
 * jQuery
 * Bootstrap
-
+---
+[ Click here to link to the URL! ](https://yuniksung.github.io/work-day-scheduler/)
+---
+[ Click here to link to the repository! ](https://github.com/yuniksung/work-day-scheduler.git)
+---
 ---
 ## Contribution
 - YUNIK SUNG <YUNIKSUNG@GMAIL.COM>
