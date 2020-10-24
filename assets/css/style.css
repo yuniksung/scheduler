@@ -29,6 +29,10 @@ textarea{
   display: none;
 }
 
+.notice {
+  color: yellowgreen;
+}
+
 /* Digital clock style */
 .datetime {
   color: #fff;
